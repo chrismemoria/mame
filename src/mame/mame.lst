@@ -17068,11 +17068,6 @@ dct11em                         //
 decmate2                        //
 decmate3                        //
 
-@source:dec/decstation.cpp
-ds2100                          // 1989 Digital Equipment Corporation (DECstation 2100)
-ds3100                          // 1989 Digital Equipment Corporation (DECstation 3100)
-ds5k133                         // 1993 Digital Equipment Corporation (DECstation 5000/133)
-
 @source:dec/dectalk.cpp
 dectalk                         // 1983 Digital Equipment Corporation
 
@@ -17086,6 +17081,13 @@ dtc03                           // 1985 Digital Equipment Corporation
 d2k300axp                       // DEC 2000 Model 300 AXP
 d2k500axp                       // DEC 2000 Model 500 AXP
 dpcaxp150                       // DECpc AXP 150
+
+@source:dec/kn01.cpp
+ds2100                          // 1989 Digital Equipment Corporation (DECstation 2100)
+ds3100                          // 1989 Digital Equipment Corporation (DECstation 3100)
+
+@source:dec/kn02.cpp
+ds5k133                         // 1993 Digital Equipment Corporation (DECstation 5000/133)
 
 @source:dec/pdp1.cpp
 pdp1                            // 1961 DEC PDP1
@@ -18373,6 +18375,7 @@ mandingac                       // bootleg (Centromatic)
 mandingaeg                      // bootleg (Electrogame)
 mandingarf                      // bootleg (Recreativos Franco S.A.)
 mandinka                        // bootleg
+mcwars                          // bootleg
 meteora                         // bootleg (Alca)
 mimonkey                        // (c) 1982 Universal Video Games (US Copyright Office info - http://cocatalog.loc.gov)
 mimonsco                        // (c) 1982 bootleg
@@ -23133,6 +23136,7 @@ blazeon                         // (c) 1992 Atlus
 blazeonj                        // (c) 1992 Atlus
 bloodwar                        // (c) 1994 Kaneko
 bonkadv                         // (c) 1994 Kaneko
+bonkadva                        // (c) 1994 Kaneko
 brapboys                        // (c) 1992 Kaneko
 brapboysp                       // (c) 1992 Kaneko
 brapboysp2                      // (c) 1992 Kaneko
@@ -26713,7 +26717,8 @@ unkmerit                        // (c) 1989 Merit
 
 @source:merit/merit3xx.cpp
 ma6710                          // (c) 1989 Merit
-ma7551                          // (c) 199? Merit
+ma7551p                         // (c) 199? Merit
+ma7551t                         // (c) 199? Merit
 ma7556                          // (c) 199? Merit
 ma7558                          // (c) 199? Merit
 
@@ -32826,6 +32831,7 @@ tenkomor                        // 1998.?? Tenkomori Shooting (World, TKM2/VER.A
 tenkomorja                      // 1998.12 Tenkomori Shooting (Japan, TKM1/VER.A1)
 toukon3                         // 1997.12 Shin Nihon Pro Wrestling Toukon Retsuden 3 Arcade Edition (Japan, TR1/VER.A)
 truckk                          // 2000.06 Truck Kyousoukyoku (Metro) (Japan, TKK2/VER.A)
+ujlnow                          // 1999.10? Um Jammer Lammy NOW! (Japan, UL1/VER.A)
 
 @source:namco/namcos21.cpp
 winrun                          // (c) 1988
@@ -35642,6 +35648,7 @@ quizard4                        // (c) TAB Austria 1998
 quizard4_40                     // (c) TAB Austria 1997
 quizard4_41                     // (c) TAB Austria 1998
 quizard4cz                      // (c) TAB Austria 1998
+quizardff                       // (c) TAB Austria 1996
 
 @source:philips/minitel_2_rpic.cpp
 minitel2                        //
@@ -39553,6 +39560,7 @@ tetris1d                        //
 tetris2                         // (c) 1988 (FD1094) S16B
 tetris2d                        //
 timescan                        // (c) 1987 (Unprotected)
+timescan3                       // (c) 1987 (FD1089B)
 toryumon                        // (c) 1995 (Unprotected)
 tturf                           // (c) 1989 Sega / Sunsoft (8751)
 tturfu                          // (c) 1989 Sega / Sunsoft (8751)
