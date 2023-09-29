@@ -17746,6 +17746,9 @@ felega1
 felega2
 felega3
 
+@source:fidelity/bridgeb.cpp
+bridgeb
+
 @source:fidelity/card.cpp
 bridgec
 bridgec3
@@ -23397,6 +23400,9 @@ contraj                         // GX633 (c) 1987 (Japan)
 contraj1                        // GX633 (c) 1987 (Japan)
 gryzor                          // GX633 (c) 1987
 gryzor1                         // GX633 (c) 1987
+
+@source:konami/cougar.cpp
+spinfev
 
 @source:konami/crimfght.cpp
 crimfght                        // GX821 (c) 1989 (World)
@@ -30224,9 +30230,10 @@ imolagp                         // (c) 198? RB Bologna
 imolagpo                        // (c) 198? RB Bologna
 
 @source:misc/interflip8035.cpp
-cbrava                          //
-sevilla                         //
-toledo                          //
+cbrava                          // (c) 1982 InterFlip
+sevilla                         // (c) 1982 InterFlip
+toledo                          // (c) 1982 InterFlip
+jackuse                         // (c) 1982 InterFlip
 
 @source:misc/intrscti.cpp
 intrscti                        // ????
@@ -30305,6 +30312,7 @@ jokrwild                        // (c) 1988 Sigma
 
 @source:misc/joystand.cpp
 joystand                        // 1997 Yuvo
+x180ii                          // 1997 Yuvo
 
 @source:misc/jubilee.cpp
 jubileep                        //
@@ -30483,6 +30491,7 @@ botss                           // (c) 1992 Microprose Games Inc.
 botss11                         // (c) 1992 Microprose Games Inc.
 f15se                           // (c) 1991 Microprose Games Inc.
 f15se21                         // (c) 1991 Microprose Games Inc.
+f15se22                         // (c) 1991 Microprose Games Inc.
 stankatk                        // (c) 1992 Microprose Games Inc.
 tankbatl                        // (c) 1992 Microprose Games Inc.
 
@@ -40086,6 +40095,7 @@ wbmljo                          // (c) 1987 Sega/Westone (S2)
 wbmlvc                          // Virtual Console
 wbmlvcd                         //
 wbmld                           //
+wbmlh                           //
 wbmljod                         //
 wboy                            // 834-5984 (c) 1986 + Escape license (S1)
 wboy2                           // 834-5984 (c) 1986 + Escape license (S1)
@@ -44096,6 +44106,7 @@ demonwld1                       // TP-O16 (c) 1989 Toaplan + Taito license
 demonwld2                       // TP-O16 (c) 1989 Toaplan
 demonwld3                       // TP-O16 (c) 1989 Toaplan
 demonwld4                       // TP-O16 (c) 1989 Toaplan
+demonwld5                       // TP-O16 (c) 1989 Toaplan + APM Electronics license
 fireshrk                        // TP-O17 (c) 1990 Toaplan
 fireshrka                       // TP-O17 (c) 1989 Toaplan
 fireshrkd                       // TP-O17 (c) 1990 Toaplan
