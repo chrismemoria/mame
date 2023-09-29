@@ -79,6 +79,7 @@ on Joerg Woerner's datamath.org: http://www.datamath.org/IC_List.htm
  @MP0163   TMS1000   1979, A-One LSI Match Number/LJN Electronic Concentration
  @MP0166   TMS1000   1980, A-One Arrange Ball/LJN Computer Impulse/Tandy Zingo (model 60-2123)
  @MP0168   TMS1000   1979, Conic Multisport/Tandy Sports Arena (model 60-2158)
+ *MP0169   TMS1000   1979, Conic Electronic Baseball
  @MP0170   TMS1000   1979, Conic Football
  *MP0171   TMS1000   1979, Tomy Soccer
  *MP0220   TMS1000   1980, Tomy Teacher
@@ -956,10 +957,10 @@ ROM_END
   * TMS1000NLL MP0915 (die label: 1000B, MP0915)
   * 2 motors (one for back axis, one for steering), no sound
 
-  It's a programmable buggy, like Big Track but much simpler. To add a command
+  It's a programmable buggy, like Big Trak but much simpler. To add a command
   step in program-mode, press a direction key and one of the time delay number
   keys at the same time. To run the program(max 24 steps), switch to run-mode
-  and press the go-key.
+  and press the go key.
 
   known releases:
   - Japan: System Control Car: Cheetah, published by Bandai
@@ -4146,7 +4147,7 @@ ROM_END
 
   known releases:
   - Hong Kong: Electronic Football II, published by Conic
-  - USA: Electronic Football II, published by Tandy
+  - USA: Electronic Football II (model 60-2169), published by Tandy
 
 *******************************************************************************/
 
@@ -9649,6 +9650,10 @@ ROM_END
 
   The In command was canceled midst production, it is basically a nop. Newer
   releases and the European version removed the button completely.
+
+  There's also an unofficial Soviet Version: Elektronika IM-11 (УУ-1 MCU and
+  КМ1010КТ1), Lunokhod and later Planetokhod. The software is presumed to be
+  identical to Big Trak, УУ-1 is very likely a TMS1000 clone.
 
 *******************************************************************************/
 
