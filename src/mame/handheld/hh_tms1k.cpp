@@ -957,15 +957,17 @@ ROM_END
   * TMS1000NLL MP0915 (die label: 1000B, MP0915)
   * 2 motors (one for back axis, one for steering), no sound
 
-  It's a programmable buggy, like Big Trak but much simpler. To add a command
-  step in program-mode, press a direction key and one of the time delay number
-  keys at the same time. To run the program(max 24 steps), switch to run-mode
-  and press the go key.
+  It's a programmable buggy modeled after the Lamborghini Cheetah, it's like
+  Big Trak but much simpler. To add a command step in program-mode, press a
+  direction key and one of the time delay number keys at the same time. To run
+  the program(max 24 steps), switch to run-mode and press the go key.
 
   known releases:
   - Japan: System Control Car: Cheetah, published by Bandai
   - USA: The Incredible Brain Buggy, published by Fundimensions
   - UK: The Incredible Brain Buggy, published by Palitoy (same as USA version)
+
+  Bandai also made an RC car version of the Cheetah with the same mould.
 
 *******************************************************************************/
 
@@ -997,6 +999,8 @@ private:
 void bcheetah_state::machine_start()
 {
 	hh_tms1k_state::machine_start();
+
+	// resolve handlers
 	m_motor1.resolve();
 	m_motor2_left.resolve();
 	m_motor2_right.resolve();
@@ -1007,8 +1011,8 @@ void bcheetah_state::machine_start()
 void bcheetah_state::write_r(u32 data)
 {
 	// R0-R4: input mux
-	// R5,R6: tied to K4??
 	m_inp_mux = data & 0x1f;
+	m_r = data;
 }
 
 void bcheetah_state::write_o(u16 data)
@@ -1017,15 +1021,15 @@ void bcheetah_state::write_o(u16 data)
 	// O0: front motor steer left
 	// O2: front motor steer right
 	// O3: GND, other: N/C
-	m_motor1 = data >> 1 & 1;
-	m_motor2_left = data & 1;
-	m_motor2_right = data >> 2 & 1;
+	m_motor1 = BIT(data, 1);
+	m_motor2_left = BIT(data, 0);
+	m_motor2_right = BIT(data, 2);
 }
 
 u8 bcheetah_state::read_k()
 {
-	// K: multiplexed inputs
-	return read_inputs(5);
+	// K: multiplexed inputs, K4 is also tied to R5+R6
+	return read_inputs(5) | ((m_r & 0x60) ? 4 : 0);
 }
 
 // inputs
@@ -1063,7 +1067,7 @@ INPUT_PORTS_END
 void bcheetah_state::bcheetah(machine_config &config)
 {
 	// basic machine hardware
-	TMS1000(config, m_maincpu, 100000); // approximation - RC osc. R=47K, C=47pF
+	TMS1000(config, m_maincpu, 350000); // approximation - RC osc. R=47K, C=47pF
 	m_maincpu->read_k().set(FUNC(bcheetah_state::read_k));
 	m_maincpu->write_r().set(FUNC(bcheetah_state::write_r));
 	m_maincpu->write_o().set(FUNC(bcheetah_state::write_o));
@@ -9923,6 +9927,7 @@ void mbdtower_state::machine_start()
 {
 	hh_tms1k_state::machine_start();
 
+	// resolve handlers
 	m_motor_pos_out.resolve();
 	m_card_pos_out.resolve();
 	m_motor_on_out.resolve();
@@ -12335,6 +12340,7 @@ void wtalker_state::machine_start()
 {
 	hh_tms1k_state::machine_start();
 
+	// register for savestates
 	save_item(NAME(m_pulse));
 	save_item(NAME(m_dial));
 	save_item(NAME(m_ram_address));
@@ -17318,7 +17324,7 @@ SYST( 1980, arrball,    0,         0,      arrball,   arrball,   arrball_state, 
 
 SYST( 1980, mathmagi,   0,         0,      mathmagi,  mathmagi,  mathmagi_state,  empty_init, "APF Electronics Inc.", "Mathemagician", MACHINE_SUPPORTS_SAVE | MACHINE_NO_SOUND_HW )
 
-SYST( 1979, bcheetah,   0,         0,      bcheetah,  bcheetah,  bcheetah_state,  empty_init, "Bandai", "System Control Car: Cheetah", MACHINE_SUPPORTS_SAVE | MACHINE_NO_SOUND_HW | MACHINE_MECHANICAL ) // ***
+SYST( 1979, bcheetah,   0,         0,      bcheetah,  bcheetah,  bcheetah_state,  empty_init, "Bandai", "System Control Car: Cheetah", MACHINE_SUPPORTS_SAVE | MACHINE_NO_SOUND_HW | MACHINE_MECHANICAL | MACHINE_CLICKABLE_ARTWORK ) // ***
 SYST( 1980, racetime,   0,         0,      racetime,  racetime,  racetime_state,  empty_init, "Bandai", "Race Time", MACHINE_SUPPORTS_SAVE )
 SYST( 1981, tc7atc,     0,         0,      tc7atc,    tc7atc,    tc7atc_state,    empty_init, "Bandai", "TC7: Air Traffic Control", MACHINE_SUPPORTS_SAVE )
 SYST( 1982, uboat,      0,         0,      uboat,     uboat,     uboat_state,     empty_init, "Bandai", "U-Boat", MACHINE_SUPPORTS_SAVE )
